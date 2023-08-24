@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, Text, View } from "react-native";
+import TextInputs from "./Learning/TextInput";
+import ListViews from "./Learning/ListViews";
+import PlatformSpecific from "./Learning/PlatformSpecificCode";
 
-export default function App() {
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView>
+      <View>
+        <Text style={{ fontSize: 24, textAlign: "center" }}>
+          Un-comment the components from App.js file to check
+        </Text>
+      </View>
+      {/* <TextInputs /> */}
+      {/* <ListViews /> */}
+
+      {/* IMPORTANT -- PLATFORM SPECIFIC CODE */}
+      {/* <PlatformSpecific /> */}
+    </ScrollView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
